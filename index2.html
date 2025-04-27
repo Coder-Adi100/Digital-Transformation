@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>The Digital Readiness Quiz</title>
+  </head>
+  <body>
+    
+    <section class="quiz1">
+      <h2>Are you digitally ready?</h2>
+      <form id="quiz1">
+        <div class="question">
+          <h3>1. Do you use cloud storage regularly?</h3>
+          <label><input type="radio" name="q1" value="1" /> Yes</label>
+          <label><input type="radio" name="q1" value="0" /> No</label>
+        </div>
+        <div class="question">
+          <h3>2. Have you treied AI tools like ChatGPT?</h3>
+          <label><input type="radio" name="q2" value="1" /> Yes</label>
+          <label><input type="radio" name="q2" value="0" /> No</label>
+        </div>
+        <div class="question">
+          <h3>3. Do you manage your passwords securely?</h3>
+          <label><input type="radio" name="q3" value="1" /> Yes</label>
+          <label><input type="radio" name="q3" value="0" /> No</label>
+        </div>
+        <div class="question">
+          <h3>4. Do you prefer digital payments over cash?</h3>
+          <label><input type="radio" name="q4" value="1" /> Yes</label>
+          <label><input type="radio" name="q4" value="0" /> No</label>
+        </div>
+        <div class="question">
+          <h3>
+            5. Do you prefer E-Com & Quick-Com over shopping in a retail store?
+          </h3>
+          <label><input type="radio" name="q5" value="1" /> Yes</label>
+          <label><input type="radio" name="q5" value="0" /> No</label>
+        </div>
+        <button type="button" class="submitBtn1">Submit Quiz</button>
+        <div class="result1" id="result1"></div>
+      </form>
+    </section>
+
+    <!-- quiz2 -->
+
+    <section class="quiz2">
+      <h2>How Tech Savvy are you?</h2>
+      <form id="quiz2">
+        <div class="question">
+          <h3>1. When faced with a new technology, you usually: </h3>
+          <label><input type="radio" name="q6" value="1" /> Explore and learn it independently</label>
+          <label><input type="radio" name="q6" value="0" /> Wait for someone to explain it to you</label>
+        </div>
+        <div class="question">
+          <h3>2.How often do you update your digital skills (new apps, AI tools, etc)?</h3>
+          <label><input type="radio" name="q7" value="1" /> Regularly, it's part of my routine</label>
+          <label><input type="radio" name="q7" value="0" /> Only when absolutely necessary</label>
+        </div>
+        <div class="question">
+          <h3>3. You hear about a viral AI-driven trend going on. What do you do?</h3>
+          <label><input type="radio" name="q8" value="1" /> Go ahead & try it!</label>
+          <label><input type="radio" name="q8" value="0" /> Ignore it</label>
+        </div>
+        <div class="question">
+          <h3>4. How comfortable are you working or studying remotely using technology(AI & EdTech, etc.)?</h3>
+          <label><input type="radio" name="q9" value="1" /> Very comfortable — it's efficient</label>
+          <label><input type="radio" name="q9" value="0" /> I prefer traditional methods</label>
+        </div>
+        <div class="question">
+          <h3>
+            5. In a world increasingly run by AI, you see yourself as: </h3>
+          <label><input type="radio" name="q10" value="1" /> A creator and innovator of solutions</label>
+          <label><input type="radio" name="q10" value="0" /> A follower adapting slowly</label>
+        </div>
+        <button type="button" class="submitBtn2">Submit Quiz</button>
+        <div class="result2" id="result2"></div>
+      </form>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

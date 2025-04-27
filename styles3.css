@@ -1,0 +1,113 @@
+/* 1. Font & Reset */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #27293d 100%);
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* 2. Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #333333;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Header */
+header h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #27293d;
+}
+
+.intro {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* 4. Section Titles */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+  color: #27293d;
+  border-bottom: 3px solid #836afb;
+  padding-bottom: 8px;
+}
+
+/* 5. Definition List */
+dl {
+  margin-bottom: 32px;
+}
+dt {
+  font-weight: 600;
+  margin-top: 16px;
+  color: #6a40f6;
+}
+dd {
+  margin-left: 0;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* 6. Build List */
+.build-list {
+  list-style: none;
+  padding-left: 0;
+}
+.build-list li {
+  margin-bottom: 20px;
+}
+.build-list strong {
+  color: #6a40f6;
+  font-weight: 600;
+}
+
+/* 7. Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 30px 16px;
+  }
+  .container {
+    padding: 30px 20px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 16px;
+  }
+  header h1 {
+    font-size: 1.8rem;
+  }
+  .intro,
+  dd {
+    font-size: 0.95rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+}
