@@ -28,6 +28,11 @@ body {
             box-shadow: 0 4px 18px rgba(0,0,0,0.1);
             padding: 1rem 2rem;
         }
+#adi {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
 
         .navbar-brand {
             font-size: 1.8rem;
