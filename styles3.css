@@ -16,7 +16,51 @@ body {
   line-height: 1.6;
   padding: 40px 20px;
 }
+.navbar {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a2e 100%);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+        }
 
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-weight: 500;
+            margin: 0 1rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--accent-color) !important;
+        }
 /* 2. Container */
 .container {
   max-width: 800px;
