@@ -17,6 +17,12 @@ body {
   padding: 20px 40px 60px;
   line-height: 1.5;
 }
+        /* ===== Custom Styles ===== */
+        :root {
+            --primary-color: #6c63ff;
+            --secondary-color: #2f2e41;
+            --accent-color: #ff6584;
+        }
 
 .navbar {
             background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a2e 100%);
