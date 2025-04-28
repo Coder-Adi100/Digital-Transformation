@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Industries Transformed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg,#1a1a2e,#27293d);
+      color: #e0e0e0;
+      padding: 40px 20px;
+      line-height:1.5;
+    }
+    main { max-width: 1000px; margin: auto; }
+
+    h1, h2 { color:#00e5ff; text-align:center; margin-bottom:16px; }
+
+    /* Key Stats */
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin: 40px 0;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .stat {
+      background: #1f222e;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1 1 200px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .stat h3 { font-size: 2.5rem; color:#836afb; }
+    .stat p { margin-top:8px; font-size:1rem; color:#a3a8c6; }
+
+    /* Enhanced Carousel Styles */
+    .sector { margin: 60px 0; }
+    .carousel-container {
+      position: relative;
+      padding: 0 40px;
+      margin: 2rem 0;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 1rem;
+    }
+    .carousel-track::-webkit-scrollbar { display: none; }
+    .slide {
+      flex: 0 0 300px;
+      background: #ffffff0d;
+      border-radius: 12px;
+      backdrop-filter: blur(4px);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .slide:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .slide img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid #00e5ff33;
+    }
+    .slide-content {
+      padding: 1.2rem;
+      background: linear-gradient(180deg, #1f222e 0%, #27293d 100%);
+    }
+    .slide-content h3 {
+      color: #00e5ff;
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+    }
+    .slide-content p {
+      color: #a3a8c6;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .btn-prev, .btn-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background: #836afb;
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: all 0.3s ease;
+    }
+    .btn-prev:hover, .btn-next:hover {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.1);
+    }
+    .btn-prev { left: 0; }
+    .btn-next { right: 0; }
+
+    @media (max-width: 768px) {
+      .slide { flex: 0 0 260px; }
+      .btn-prev, .btn-next { width: 35px; height: 35px; }
+      .stats { flex-direction: column; }
+    }
+    @media (max-width: 480px) {
+      .slide { flex: 0 0 80%; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Industries Transformed</h1>
+
+    <!-- Key Stats -->
+    <div class="stats">
+      <div class="stat">
+        <h3 id="stat1">0%</h3>
+        <p>Businesses Digitized</p>
+      </div>
+      <div class="stat">
+        <h3 id="stat2">$0T</h3>
+        <p>Global FinTech Valuation</p>
+      </div>
+      <div class="stat">
+        <h3 id="stat3">0%</h3>
+        <p>Remote Workforce</p>
+      </div>
+    </div>
+
+    <!-- Carousels will be inserted here -->
+  </main>
+
+  <script>
+    const sectors = [
+      {
+        id:"healthcare", title:"Healthcare",
+        slides: [
+          { img:"1.webp", 
+            title:"AI Diagnostics",
+            desc:"Deep-learning models identify anomalies in medical scans with over 90% accuracy."
+          },
+          { img:"telemedicine.png", 
+            title:"Telemedicine",
+            desc:"Virtual consultations expand access to care, especially in remote regions."
+          },
+          { img:"wearable images.jpg", 
+            title:"Wearable Health",
+            desc:"Smart devices continuously monitor vitals to enable preventive interventions."
+          },
+          { img:"robotic surgery.jpg", 
+            title:"Robotic Surgery",
+            desc:"Precision robotics assist surgeons, reducing downtime and improving outcomes."
+          }
+        ]
+      },
+      {
+        id:"education", title:"Education",
+        slides: [
+          { img:"mooc.jpg", 
+            title:"MOOCs", 
+            desc:"Massive Open Online Courses democratize access to top educators." 
+          },
+          { img:"online+teaching.jpg", 
+            title:"Virtual Classrooms", 
+            desc:"Interactive tools bring teachers and students together online." 
+          },
+          { img:"ai tutors.png", 
+            title:"AI Tutors", 
+            desc:"Adaptive systems personalize learning paths at scale." 
+          },
+          { img:"gamified learning.jpg", 
+            title:"Gamified Learning", 
+            desc:"Engagement through game mechanics boosts retention." 
+          }
+        ]
+      },
+      {
+        id:"finance", title:"Finance",
+        slides: [
+          { img:"fintech apps.webp", 
+            title:"finTech Apps", 
+            desc:"Digital wallets and UPI process billions of transactions monthly." 
+          },
+          { img:"blockchain images.webp", 
+            title:"Blockchain", 
+            desc:"Distributed ledgers enhance transparency and security." 
+          },
+          { img:"robo advisors.jpg", 
+            title:"Robo-Advisors", 
+            desc:"Algorithmic investing lowers fees and biases." 
+          },
+          { img:"open banking.png", 
+            title:"Open Banking", 
+            desc:"APIs foster innovation by sharing financial data securely." 
+          }
+        ]
+      },
+      {
+        id:"business", title:"Business",
+        slides: [
+          { img:"remote collaboration.png", 
+            title:"Remote Collaboration", 
+            desc:"Platforms like Slack & Notion power distributed teams." 
+          },
+          { img:"cloud migration.webp", 
+            title:"Cloud Migration", 
+            desc:"Enterprises shift to cloud for scalability and resilience." 
+          },
+          { img:"process automation.jpg", 
+            title:"Process Automation", 
+            desc:"RPA bots free teams from repetitive tasks." 
+          },
+          { img:"data driven culture.jpg", 
+            title:"Data-Driven Culture", 
+            desc:"Real-time dashboards drive faster, smarter decisions." 
+          }
+        ]
+      }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const main = document.querySelector('main');
+      
+      // Create carousels
+      sectors.forEach(sector => {
+        const carouselHTML = `
+          <section class="sector">
+            <h2>${sector.title}</h2>
+            <div class="carousel-container" id="${sector.id}-carousel">
+              <button class="btn-prev">‹</button>
+              <div class="carousel-track" id="${sector.id}-track">
+                ${sector.slides.map(slide => `
+                  <div class="slide">
+                    <img src="${slide.img}" alt="${slide.title}">
+                    <div class="slide-content">
+                      <h3>${slide.title}</h3>
+                      <p>${slide.desc}</p>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+              <button class="btn-next">›</button>
+            </div>
+          </section>
+        `;
+        main.insertAdjacentHTML('beforeend', carouselHTML);
+      });
+
+      // Carousel controls
+      document.querySelectorAll('.btn-prev, .btn-next').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const container = e.target.closest('.carousel-container');
+          const track = container.querySelector('.carousel-track');
+          const slideWidth = track.querySelector('.slide').offsetWidth + 24;
+          const direction = e.target.classList.contains('btn-next') ? 1 : -1;
+          track.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
+        });
+      });
+
+      // Auto-advance carousels
+      sectors.forEach(sector => {
+        const container = document.getElementById(`${sector.id}-carousel`);
+        const track = container.querySelector('.carousel-track');
+        let autoScroll = setInterval(() => {
+          const slideWidth = track.querySelector('.slide').offsetWidth + 24;
+          track.scrollBy({ left: slideWidth, behavior: 'smooth' });
+        }, 5000);
+
+        container.addEventListener('mouseenter', () => clearInterval(autoScroll));
+        container.addEventListener('mouseleave', () => {
+          autoScroll = setInterval(() => {
+            const slideWidth = track.querySelector('.slide').offsetWidth + 24;
+            track.scrollBy({ left: slideWidth, behavior: 'smooth' });
+          }, 5000);
+        });
+      });
+
+      // Stats animation
+      const animateStat = (id, end, suffix='') => {
+        const el = document.getElementById(id);
+        let cur = 0;
+        const step = end/100;
+        const ticker = setInterval(() => {
+          cur += step;
+          if (cur >= end) {
+            el.textContent = end + suffix;
+            clearInterval(ticker);
+          } else {
+            el.textContent = Math.floor(cur) + suffix;
+          }
+        }, 30);
+      };
+      animateStat('stat1', 80, '%');
+      animateStat('stat2', 4, 'T');
+      animateStat('stat3', 65, '%');
+    });
+  </script>
+</body>
+</html>
