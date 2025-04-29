@@ -86,7 +86,7 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 .quiz1{
-  margin-top : 150px;
+  margin-top : 50px;
 }
 /* 3. Headings with bottom border */
 .quiz1 h2,
@@ -207,7 +207,7 @@ body {
         background: linear-gradient(135deg, #6c63ff, #ff6584);
         color: white;
         padding: 2rem;
-        margin: 100px auto 40px;
+        margin: 150px auto 40px;
         border-radius: 15px;
         box-shadow: 0 8px 30px rgba(0,0,0,0.12);
         max-width: 800px;
