@@ -218,91 +218,127 @@
 
   <script>
     const sectors = [
+  {
+    id: "healthcare",
+    title: "Healthcare",
+    slides: [
       {
-        id:"healthcare", title:"Healthcare",
-        slides: [
-          { img:"1.webp", 
-            title:"AI Diagnostics",
-            desc:"Deep-learning models identify anomalies in medical scans with over 90% accuracy."
-          },
-          { img:"telemedicine.png", 
-            title:"Telemedicine",
-            desc:"Virtual consultations expand access to care, especially in remote regions."
-          },
-          { img:"wearable images.jpg", 
-            title:"Wearable Health",
-            desc:"Smart devices continuously monitor vitals to enable preventive interventions."
-          },
-          { img:"robotic surgery.jpg", 
-            title:"Robotic Surgery",
-            desc:"Precision robotics assist surgeons, reducing downtime and improving outcomes."
-          }
-        ]
+        img: "1.webp",
+        title: "AI Diagnostics",
+        desc: "Deep-learning models identify anomalies in medical scans with over 90% accuracy.",
+        href: "https://health.google/intl/en_id/health-research/imaging-and-diagnostics/"
       },
       {
-        id:"education", title:"Education",
-        slides: [
-          { img:"mooc.jpg", 
-            title:"MOOCs", 
-            desc:"Massive Open Online Courses democratize access to top educators." 
-          },
-          { img:"online+teaching.jpg", 
-            title:"Virtual Classrooms", 
-            desc:"Interactive tools bring teachers and students together online." 
-          },
-          { img:"ai tutors.png", 
-            title:"AI Tutors", 
-            desc:"Adaptive systems personalize learning paths at scale." 
-          },
-          { img:"gamified learning.jpg", 
-            title:"Gamified Learning", 
-            desc:"Engagement through game mechanics boosts retention." 
-          }
-        ]
+        img: "telemedicine.png",
+        title: "Telemedicine",
+        desc: "Virtual consultations expand access to care, especially in remote regions.",
+        href: "https://www.news-medical.net/health/What-is-Telemedicine.aspx"
       },
       {
-        id:"finance", title:"Finance",
-        slides: [
-          { img:"fintech apps.webp", 
-            title:"finTech Apps", 
-            desc:"Digital wallets and UPI process billions of transactions monthly." 
-          },
-          { img:"blockchain images.webp", 
-            title:"Blockchain", 
-            desc:"Distributed ledgers enhance transparency and security." 
-          },
-          { img:"robo advisors.jpg", 
-            title:"Robo-Advisors", 
-            desc:"Algorithmic investing lowers fees and biases." 
-          },
-          { img:"open banking.png", 
-            title:"Open Banking", 
-            desc:"APIs foster innovation by sharing financial data securely." 
-          }
-        ]
+        img: "wearable images.jpg",
+        title: "Wearable Health",
+        desc: "Smart devices continuously monitor vitals to enable preventive interventions.",
+        href: "https://en.wikipedia.org/wiki/Wearable_technology#Wearable_technology_and_health"
       },
       {
-        id:"business", title:"Business",
-        slides: [
-          { img:"remote collaboration.png", 
-            title:"Remote Collaboration", 
-            desc:"Platforms like Slack & Notion power distributed teams." 
-          },
-          { img:"cloud migration.webp", 
-            title:"Cloud Migration", 
-            desc:"Enterprises shift to cloud for scalability and resilience." 
-          },
-          { img:"process automation.jpg", 
-            title:"Process Automation", 
-            desc:"RPA bots free teams from repetitive tasks." 
-          },
-          { img:"data driven culture.jpg", 
-            title:"Data-Driven Culture", 
-            desc:"Real-time dashboards drive faster, smarter decisions." 
-          }
-        ]
+        img: "robotic surgery.jpg",
+        title: "Robotic Surgery",
+        desc: "Precision robotics assist surgeons, reducing downtime and improving outcomes.",
+        href: "https://my.clevelandclinic.org/health/treatments/22178-robotic-surgery"
       }
-    ];
+    ]
+  },
+  {
+    id: "education",
+    title: "Education",
+    slides: [
+      {
+        img: "mooc.jpg",
+        title: "MOOCs",
+        desc: "Massive Open Online Courses democratize access to world-class educators.",
+        href: "https://www.coursera.org/"
+      },
+      {
+        img: "online+teaching.jpg",
+        title: "Virtual Classrooms",
+        desc: "Interactive platforms like Zoom and Teams replicate classroom dynamics online.",
+        href: "https://zoom.us/"
+      },
+      {
+        img: "ai tutors.png",
+        title: "AI Tutors",
+        desc: "Adaptive systems personalize learning paths based on each student’s performance.",
+        href: "https://www.knewton.com/"
+      },
+      {
+        img: "gamified learning.jpg",
+        title: "Gamified Learning",
+        desc: "Badges, points, and leaderboards make education engaging and reward mastery.",
+        href: "https://www.duolingo.com/"
+      }
+    ]
+  },
+  {
+    id: "finance",
+    title: "Finance",
+    slides: [
+      {
+        img: "fintech apps.webp",
+        title: "FinTech Apps",
+        desc: "Mobile wallets and UPI process billions of transactions seamlessly every day.",
+        href: "https://www.paytm.com/"
+      },
+      {
+        img: "blockchain images.webp",
+        title: "Blockchain",
+        desc: "Decentralized ledgers reduce fraud and speed up cross-border settlements.",
+        href: "https://ethereum.org/"
+      },
+      {
+        img: "robo advisors.jpg",
+        title: "Robo-Advisors",
+        desc: "Algorithmic investing platforms offer low-fee, automated portfolio management.",
+        href: "https://www.betterment.com/"
+      },
+      {
+        img: "open banking.png",
+        title: "Open Banking",
+        desc: "APIs let third-party developers build innovative services around bank data.",
+        href: "https://www.openbanking.org.uk/"
+      }
+    ]
+  },
+  {
+    id: "business",
+    title: "Business",
+    slides: [
+      {
+        img: "remote collaboration.png",
+        title: "Remote Collaboration",
+        desc: "Tools like Slack and Notion keep distributed teams aligned and productive.",
+        href: "https://slack.com/"
+      },
+      {
+        img: "cloud migration.webp",
+        title: "Cloud Migration",
+        desc: "Enterprises shift to AWS, Azure, and GCP for scalability and resilience.",
+        href: "https://aws.amazon.com/"
+      },
+      {
+        img: "process automation.jpg",
+        title: "Process Automation",
+        desc: "RPA bots handle repetitive tasks—freeing human talent for higher-value work.",
+        href: "https://www.uipath.com/"
+      },
+      {
+        img: "data driven culture.jpg",
+        title: "Data-Driven Culture",
+        desc: "Real-time dashboards enable evidence-based decisions at every level.",
+        href: "https://www.tableau.com/"
+      }
+    ]
+  }
+];
 
     document.addEventListener('DOMContentLoaded', () => {
       const main = document.querySelector('main');
@@ -360,7 +396,17 @@
           }, 5000);
         });
       });
-
+      //href functionality
+sectors.forEach(sector => {
+  const track = document.getElementById(`${sector.id}-track`);
+  sector.slides.forEach((slideData, idx) => {
+    const slideElem = track.children[idx];
+    slideElem.style.cursor = 'pointer';
+    slideElem.addEventListener('click', () => {
+      window.open(slideData.href, '_blank');
+    });
+  });
+});
       // Stats animation
       const animateStat = (id, end, suffix='') => {
         const el = document.getElementById(id);
