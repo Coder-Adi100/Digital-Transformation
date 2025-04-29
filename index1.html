@@ -396,7 +396,17 @@
           }, 5000);
         });
       });
-
+      //href functionality
+sectors.forEach(sector => {
+  const track = document.getElementById(`${sector.id}-track`);
+  sector.slides.forEach((slideData, idx) => {
+    const slideElem = track.children[idx];
+    slideElem.style.cursor = 'pointer';
+    slideElem.addEventListener('click', () => {
+      window.open(slideData.href, '_blank');
+    });
+  });
+});
       // Stats animation
       const animateStat = (id, end, suffix='') => {
         const el = document.getElementById(id);
