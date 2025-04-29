@@ -299,6 +299,41 @@
             margin-bottom: 20px;
             border-radius: 10px;
         }
+        /* ===== Custom Footer Styles ===== */
+footer {
+  background: #1a1a2e;           /* deep, dark backdrop */
+  border-top: 3px solid #6c63ff; /* primary accent as a top border */
+  color: #a3a8c6;                /* lighter secondary text */
+  padding: 2rem 0;               /* generous vertical padding */
+}
+
+footer small {
+  color: #8186a0;                /* slightly muted for copyright text */
+}
+
+footer a {
+  color: #ff6584;                /* your accent color for links */
+  margin: 0 0.5rem;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #6c63ff;                /* swap to primary on hover */
+  text-decoration: none;
+}
+
+/* Optional: make it stick to bottom if content is short */
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;  /* push footer to bottom */
+}
+
     </style>
 </head>
 <body>
@@ -402,6 +437,22 @@
             </div>
         </div>
     </section>
+  <!-- ===== Footer ===== -->
+  <footer class="bg-dark text-light pt-4 pb-3 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+          <small>© 2025 Aditya Sharma &amp; Ashvik. All rights reserved.</small>
+        </div>
+        <div class="col-md-6 text-center text-md-right">
+          <a href="#" class="text-light mx-2">Privacy Policy</a>
+          <a href="#" class="text-light mx-2">Terms of Service</a>
+          <a href="#" class="text-light mx-2">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ===== End Footer ===== -->
 
 
 
