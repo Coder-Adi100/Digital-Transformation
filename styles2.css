@@ -202,3 +202,39 @@ body {
     padding: 10px 0;
   }
 }
+ /* Motivation Container Styles */
+      .motivation-container {
+        background: linear-gradient(135deg, #6c63ff, #ff6584);
+        color: white;
+        padding: 2rem;
+        margin: 100px auto 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        max-width: 800px;
+        text-align: center;
+        animation: fadeInUp 1s ease;
+      }
+
+      .motivation-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      }
+
+      .motivation-container p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
