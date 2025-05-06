@@ -2,22 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Industries Transformed</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <!-- Animate CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <style>
     * { box-sizing: border-box; margin:0; padding:0; }
-      :root {
-            --primary-color: #6c63ff;
-            --secondary-color: #2f2e41;
-            --accent-color: #ff6584;
-        }
+    :root {
+      --primary-color: #6c63ff;
+      --secondary-color: #2f2e41;
+      --accent-color: #ff6584;
+    }
     body {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg,#1a1a2e,#27293d);
@@ -25,62 +22,54 @@
       padding: 40px 20px;
       line-height:1.5;
     }
-    
     main { max-width: 1000px; margin: auto; }
-
     h1, h2 { color:#00e5ff; text-align:center; margin-bottom:16px; }
-.navbar {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a2e 100%);
-            box-shadow: 0 4px 18px rgba(0,0,0,0.1);
-            padding: 1rem 2rem;
-        }
-  #adi {
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-        .navbar-brand {
-            font-size: 1.8rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: all 0.3s ease;
-        }
-
-        .navbar-brand:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-link {
-            color: #fff !important;
-            font-weight: 500;
-            margin: 0 1rem;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-    h1{
-    margin-top: 150px;
+    .navbar {
+      background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a2e 100%);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
     }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-link.active {
-            color: var(--accent-color) !important;
-        }
-
-    /* Key Stats */
+    #adi {
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+    .navbar-brand {
+      font-size: 1.8rem;
+      font-weight: 700;
+      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: all 0.3s ease;
+    }
+    .navbar-brand:hover {
+      transform: scale(1.05);
+    }
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin: 0 1rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    h1 {
+      margin-top: 150px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-color);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .nav-link.active {
+      color: var(--accent-color) !important;
+    }
     .stats {
       display: flex;
       justify-content: space-around;
@@ -98,8 +87,6 @@
     }
     .stat h3 { font-size: 2.5rem; color:#836afb; }
     .stat p { margin-top:8px; font-size:1rem; color:#a3a8c6; }
-
-    /* Enhanced Carousel Styles */
     .sector { margin: 60px 0; }
     .carousel-container {
       position: relative;
@@ -169,7 +156,6 @@
     }
     .btn-prev { left: 0; }
     .btn-next { right: 0; }
-
     @media (max-width: 768px) {
       .slide { flex: 0 0 260px; }
       .btn-prev, .btn-next { width: 35px; height: 35px; }
@@ -184,170 +170,113 @@
       border-top: 3px solid var(--primary-color);
     }
     .gradient-text {
-        background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
+      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
     }
-
     .footer h5 {
-        color: #00e5ff;
-        margin-bottom: 1.2rem;
+      color: #00e5ff;
+      margin-bottom: 1.2rem;
     }
-
     .footer-link {
-        color: #a3a8c6;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        display: block;
-        margin: 0.5rem 0;
+      color: #a3a8c6;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+      margin: 0.5rem 0;
     }
-
     .footer-link:hover {
-        color: var(--accent-color);
-        transform: translateX(5px);
+      color: var(--accent-color);
+      transform: translateX(5px);
     }
-
     .social-links {
-        display: flex;
-        gap: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
     }
-
     .social-icon {
-        color: #a3a8c6;
-        font-size: 1.5rem;
-        transition: all 0.3s ease;
+      color: #a3a8c6;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
     }
-
     .social-icon:hover {
-        color: var(--accent-color);
-        transform: translateY(-3px);
+      color: var(--accent-color);
+      transform: translateY(-3px);
     }
-
     .made-in-india {
-        display: block;
-        margin-top: 0.5rem;
+      display: block;
+      margin-top: 0.5rem;
     }
-
     .heart {
-        color: var(--accent-color);
-        animation: heartbeat 1.5s infinite;
+      color: var(--accent-color);
+      animation: heartbeat 1.5s infinite;
     }
-
     @keyframes heartbeat {
-        0% { transform: scale(1); }
-        15% { transform: scale(1.3); }
-        30% { transform: scale(1); }
-        45% { transform: scale(1.15); }
-        60% { transform: scale(1); }
+      0% { transform: scale(1); }
+      15% { transform: scale(1.3); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.15); }
+      60% { transform: scale(1); }
     }
-    /* Ensure footer stays at bottom */
     html, body {
-        height: 100%;
+      height: 100%;
     }
-    
     body {
-        display: flex;
-        flex-direction: column;
+      display: flex;
+      flex-direction: column;
     }
-    
     main {
-        flex: 1;
+      flex: 1;
     }
-              /* Modal Styles */
-              .modal-content {
+    .modal-content {
       border: 2px solid var(--primary-color);
       border-radius: 10px;
-  }
-
-  .modal-header {
+    }
+    .modal-header {
       background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
       color: white;
       border-bottom: none;
-  }
-
-  .modal-title {
+    }
+    .modal-title {
       font-weight: 700;
-  }
-
-  .modal-body {
+    }
+    .modal-body {
       background: #fff;
       color: var(--secondary-color);
-  }
-
-  .modal-footer {
+    }
+    .modal-footer {
       border-top: none;
-  }
-
-  .btn-visit {
+    }
+    .btn-visit {
       background: var(--primary-color);
       color: white;
       border: none;
       transition: all 0.3s ease;
-  }
-
-  .btn-visit:hover {
+    }
+    .btn-visit:hover {
       background: var(--accent-color);
       transform: scale(1.05);
-  }
-          /* Modal Styles */
-          .modal-content {
-      border: 2px solid var(--primary-color);
-      border-radius: 10px;
-  }
-
-  .modal-header {
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-      color: white;
-      border-bottom: none;
-  }
-
-  .modal-title {
-      font-weight: 700;
-  }
-
-  .modal-body {
-      background: #fff;
-      color: var(--secondary-color);
-  }
-
-  .modal-footer {
-      border-top: none;
-  }
-
-  .btn-visit {
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      transition: all 0.3s ease;
-  }
-
-  .btn-visit:hover {
-      background: var(--accent-color);
-      transform: scale(1.05);
-  }
-
+    }
   </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#">Technological Advancements</a><a class="nav-link active"id="adi" href="#home">By Aditya and Ashvik</a></li>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="index3.html">About This Project</a></li>
-                <li class="nav-item"><a class="nav-link" href="index1.html">Industries Transformed</a></li>
-                <li class="nav-item"><a class="nav-link" href="index2.html">Quiz</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <a class="navbar-brand" href="#">Technological Advancements</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link active" id="adi" href="#home">By Aditya and Ashvik</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index3.html">About This Project</a></li>
+        <li class="nav-item"><a class="nav-link" href="index1.html">Industries Transformed</a></li>
+        <li class="nav-item"><a class="nav-link" href="index2.html">Quiz</a></li>
+      </ul>
+    </div>
+  </nav>
   <main>
     <h1>Industries Transformed</h1>
-
-    <!-- Key Stats -->
     <div class="stats">
       <div class="stat">
         <h3 id="stat1">0%</h3>
@@ -363,276 +292,254 @@
       </div>
     </div>
   </main>
- <footer class="footer mt-5">
-        <div class="container py-5">
-            <div class="row">
-                <!-- Brand Column -->
-                <div class="col-md-4 mb-4">
-                    <h3 class="gradient-text">Technological Advancements</h3>
-                    <p class="text-muted mt-3">Exploring the digital frontier and its impact on modern society.</p>
-                </div>
-    
-                <!-- Quick Links -->
-                <div class="col-md-3 mb-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="footer-link">Home</a></li>
-                        <li><a href="index1.html" class="footer-link">Industries</a></li>
-                        <li><a href="index2.html" class="footer-link">Quiz</a></li>
-                        <li><a href="index3.html" class="footer-link">About</a></li>
-                    </ul>
-                </div>
-
-                <!-- Learn More -->
-                <div class="col-md-3 mb-4">
-                    <h5>Learn More</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.pendo.io/glossary/digital-adoption/" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionModal">What is Digital Adoption?</a></li>
-                        <li><a href="https://en.wikipedia.org/wiki/Digital_adoption_platform" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionPlatformModal">What is Digital Adoption Platform?</a></li>
-                        <li><a href="https://en.wikipedia.org/wiki/Virtual_workplace" class="footer-link learn-more-link" data-toggle="modal" data-target="#virtualWorkplaceModal">Virtual Workplace</a></li>
-                        <li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/case-studies" class="footer-link learn-more-link" data-toggle="modal" data-target="#caseStudiesModal">Case Studies</a></li>
-                    </ul>
-                </div>
-    
-                <!-- Social Media -->
-                <div class="col-md-2 mb-4">
-                    <h5>Connect With Us</h5>
-                    <div class="social-links mt-3">
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Coder-Adi100/Digital-Transformation" class="social-icon"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Copyright + Made in India -->
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <p class="mb-0 text-muted">
-                        © 2025 Aditya Sharma & Ashvik. All rights reserved. 
-                        <span class="made-in-india">Made with <span class="heart">❤️</span> in India</span>
-                    </p>
-                </div>
-            </div>
+  <footer class="footer mt-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h3 class="gradient-text">Technological Advancements</h3>
+          <p class="text-muted mt-3">Exploring the digital frontier and its impact on modern society.</p>
         </div>
-    </footer>
-
-<!-- Modals -->
-<!-- Digital Adoption Modal -->
-<div class="modal fade" id="digitalAdoptionModal" tabindex="-1" aria-labelledby="digitalAdoptionModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="digitalAdoptionModalLabel">What is Digital Adoption?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Digital adoption refers to the process by which users fully embrace and effectively utilize digital technologies to achieve their goals. It goes beyond merely implementing new tools, focusing on ensuring that individuals and organizations maximize the value of these technologies through proper training, engagement, and integration into daily workflows.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="https://www.pendo.io/glossary/digital-adoption/" class="btn btn-visit">Visit Resource</a>
-            </div>
+        <div class="col-md-3 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="index1.html" class="footer-link">Industries</a></li>
+            <li><a href="index2.html" class="footer-link">Quiz</a></li>
+            <li><a href="index3.html" class="footer-link">About</a></li>
+          </ul>
         </div>
+        <div class="col-md-3 mb-4">
+          <h5>Learn More</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionModal">What is Digital Adoption?</a></li>
+            <li><a href="#" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionPlatformModal">What is Digital Adoption Platform?</a></li>
+            <li><a href="#" class="footer-link learn-more-link" data-toggle="modal" data-target="#virtualWorkplaceModal">Virtual Workplace</a></li>
+            <li><a href="#" class="footer-link learn-more-link" data-toggle="modal" data-target="#caseStudiesModal">Case Studies</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2 mb-4">
+          <h5>Connect With Us</h5>
+          <div class="social-links mt-3">
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Coder-Adi100/Digital-Transformation" class="social-icon"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <p class="mb-0 text-muted">
+            © 2025 Aditya Sharma & Ashvik. All rights reserved. 
+            <span class="made-in-india">Made with <span class="heart">❤️</span> in India</span>
+          </p>
+        </div>
+      </div>
     </div>
-</div>
-
-<!-- Digital Adoption Platform Modal -->
-<div class="modal fade" id="digitalAdoptionPlatformModal" tabindex="-1" aria-labelledby="digitalAdoptionPlatformModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="digitalAdoptionPlatformModalLabel">What is Digital Adoption Platform?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                A Digital Adoption Platform (DAP) is a software solution designed to guide users through digital tools and applications, enhancing their ability to adopt and use technology effectively. DAPs provide in-app guidance, tutorials, and analytics to help organizations streamline onboarding, improve user experience, and drive engagement with digital products.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="https://en.wikipedia.org/wiki/Digital_adoption_platform" class="btn btn-visit">Visit Resource</a>
-            </div>
+  </footer>
+  <div class="modal fade" id="digitalAdoptionModal" tabindex="-1" role="dialog" aria-labelledby="digitalAdoptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="digitalAdoptionModalLabel">What is Digital Adoption?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-    </div>
-</div>
-
-<!-- Virtual Workplace Modal -->
-<div class="modal fade" id="virtualWorkplaceModal" tabindex="-1" aria-labelledby="virtualWorkplaceModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="virtualWorkplaceModalLabel">Virtual Workplace</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                A virtual workplace is a digital environment where employees can collaborate, communicate, and perform their job functions remotely using digital tools. Enabled by technologies like cloud computing, video conferencing, and collaboration platforms, virtual workplaces support flexible work arrangements and global connectivity.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="https://en.wikipedia.org/wiki/Virtual_workplace" class="btn btn-visit">Visit Resource</a>
-            </div>
+        <div class="modal-body">
+          Digital adoption refers to the process by which users fully embrace and effectively utilize digital technologies to achieve their goals. It goes beyond merely implementing new tools, focusing on ensuring that individuals and organizations maximize the value of these technologies through proper training, engagement, and integration into daily workflows.
         </div>
-    </div>
-</div>
-
-<!-- Case Studies Modal -->
-<div class="modal fade" id="caseStudiesModal" tabindex="-1" aria-labelledby="caseStudiesModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="caseStudiesModalLabel">Case Studies</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Case studies on digital transformation showcase real-world examples of how organizations leverage technology to innovate, improve efficiency, and enhance customer experiences. These studies provide insights into successful strategies, challenges faced, and the impact of digital initiatives across various industries.
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/case-studies" class="btn btn-visit">Visit Resource</a>
-            </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="https://www.pendo.io/glossary/digital-adoption/" class="btn btn-visit">Visit Resource</a>
         </div>
+      </div>
     </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  </div>
+  <div class="modal fade" id="digitalAdoptionPlatformModal" tabindex="-1" role="dialog" aria-labelledby="digitalAdoptionPlatformModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="digitalAdoptionPlatformModalLabel">What is Digital Adoption Platform?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          A Digital Adoption Platform (DAP) is a software solution designed to guide users through digital tools and applications, enhancing their ability to adopt and use technology effectively. DAPs provide in-app guidance, tutorials, and analytics to help organizations streamline onboarding, improve user experience, and drive engagement with digital products.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="https://en.wikipedia.org/wiki/Digital_adoption_platform" class="btn btn-visit">Visit Resource</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="virtualWorkplaceModal" tabindex="-1" role="dialog" aria-labelledby="virtualWorkplaceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="virtualWorkplaceModalLabel">Virtual Workplace</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          A virtual workplace is a digital environment where employees can collaborate, communicate, and perform their job functions remotely using digital tools. Enabled by technologies like cloud computing, video conferencing, and collaboration platforms, virtual workplaces support flexible work arrangements and global connectivity.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="https://en.wikipedia.org/wiki/Virtual_workplace" class="btn btn-visit">Visit Resource</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="caseStudiesModal" tabindex="-1" role="dialog" aria-labelledby="caseStudiesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="caseStudiesModalLabel">Case Studies</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Case studies on digital transformation showcase real-world examples of how organizations leverage technology to innovate, improve efficiency, and enhance customer experiences. These studies provide insights into successful strategies, challenges faced, and the impact of digital initiatives across various industries.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/case-studies" class="btn btn-visit">Visit Resource</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script>
     const sectors = [
-  {
-    id: "healthcare",
-    title: "Healthcare",
-    slides: [
       {
-        img: "1.webp",
-        title: "AI Diagnostics",
-        desc: "Deep-learning models identify anomalies in medical scans with over 90% accuracy.",
-        href: "https://health.google/intl/en_id/health-research/imaging-and-diagnostics/"
+        id: "healthcare",
+        title: "Healthcare",
+        slides: [
+          {
+            img: "1.webp",
+            title: "AI Diagnostics",
+            desc: "Deep-learning models identify anomalies in medical scans with over 90% accuracy.",
+            href: "https://health.google/intl/en_id/health-research/imaging-and-diagnostics/"
+          },
+          {
+            img: "telemedicine.png",
+            title: "Telemedicine",
+            desc: "Virtual consultations expand access to care, especially in remote regions.",
+            href: "https://www.news-medical.net/health/What-is-Telemedicine.aspx"
+          },
+          {
+            img: "wearable images.jpg",
+            title: "Wearable Health",
+            desc: "Smart devices continuously monitor vitals to enable preventive interventions.",
+            href: "https://en.wikipedia.org/wiki/Wearable_technology#Wearable_technology_and_health"
+          },
+          {
+            img: "robotic surgery.jpg",
+            title: "Robotic Surgery",
+            desc: "Precision robotics assist surgeons, reducing downtime and improving outcomes.",
+            href: "https://my.clevelandclinic.org/health/treatments/22178-robotic-surgery"
+          }
+        ]
       },
       {
-        img: "telemedicine.png",
-        title: "Telemedicine",
-        desc: "Virtual consultations expand access to care, especially in remote regions.",
-        href: "https://www.news-medical.net/health/What-is-Telemedicine.aspx"
+        id: "education",
+        title: "Education",
+        slides: [
+          {
+            img: "mooc.jpg",
+            title: "MOOCs",
+            desc: "Massive Open Online Courses democratize access to world-class educators.",
+            href: "https://www.coursera.org/"
+          },
+          {
+            img: "online+teaching.jpg",
+            title: "Virtual Classrooms",
+            desc: "Interactive platforms like Zoom and Teams replicate classroom dynamics online.",
+            href: "https://www.learncube.com/what-is-a-virtual-classroom.html"
+          },
+          {
+            img: "ai tutors.png",
+            title: "AI Tutors",
+            desc: "Adaptive systems personalize learning paths based on each student’s performance.",
+            href: "https://elearningindustry.com/ai-tutors-how-artificial-intelligence-is-shaping-educational-support"
+          },
+          {
+            img: "gamified learning.jpg",
+            title: "Gamified Learning",
+            desc: "Badges, points, and leaderboards make education engaging and reward mastery.",
+            href: "https://en.wikipedia.org/wiki/Gamification_of_learning"
+          }
+        ]
       },
       {
-        img: "wearable images.jpg",
-        title: "Wearable Health",
-        desc: "Smart devices continuously monitor vitals to enable preventive interventions.",
-        href: "https://en.wikipedia.org/wiki/Wearable_technology#Wearable_technology_and_health"
+        id: "finance",
+        title: "Finance",
+        slides: [
+          {
+            img: "fintech apps.webp",
+            title: "FinTech Apps",
+            desc: "Mobile wallets and UPI process billions of transactions seamlessly every day.",
+            href: "https://www.paytm.com/"
+          },
+          {
+            img: "blockchain images.webp",
+            title: "Blockchain",
+            desc: "Decentralized ledgers reduce fraud and speed up cross-border settlements.",
+            href: "https://en.wikipedia.org/wiki/Blockchain"
+          },
+          {
+            img: "robo advisors.jpg",
+            title: "Robo-Advisors",
+            desc: "Algorithmic investing platforms offer low-fee, automated portfolio management.",
+            href: "https://en.wikipedia.org/wiki/Robo-advisor"
+          },
+          {
+            img: "open banking.png",
+            title: "Open Banking",
+            desc: "APIs let third-party developers build innovative services around bank data.",
+            href: "https://www.investopedia.com/terms/o/open-banking.asp"
+          }
+        ]
       },
       {
-        img: "robotic surgery.jpg",
-        title: "Robotic Surgery",
-        desc: "Precision robotics assist surgeons, reducing downtime and improving outcomes.",
-        href: "https://my.clevelandclinic.org/health/treatments/22178-robotic-surgery"
+        id: "business",
+        title: "Business",
+        slides: [
+          {
+            img: "remote collaboration.png",
+            title: "Remote Collaboration",
+            desc: "Tools like Slack and Notion keep distributed teams aligned and productive.",
+            href: "https://www.cognizant.com/us/en/glossary/remote-collaboration"
+          },
+          {
+            img: "cloud migration.webp",
+            title: "Cloud Migration",
+            desc: "Enterprises shift to AWS, Azure, and GCP for scalability and resilience.",
+            href: "https://www.accenture.com/in-en/insights/cloud-migration-index"
+          },
+          {
+            img: "process automation.jpg",
+            title: "Process Automation",
+            desc: "RPA bots handle repetitive tasks—freeing human talent for higher-value work.",
+            href: "https://www.sap.com/india/products/technology-platform/process-automation/what-is-process-automation.html"
+          },
+          {
+            img: "data driven culture.jpg",
+            title: "Data-Driven Culture",
+            desc: "Real-time dashboards enable evidence-based decisions at every level.",
+            href: "https://www.datacamp.com/blog/how-to-create-data-driven-organization"
+          }
+        ]
       }
-    ]
-  },
-  {
-    id: "education",
-    title: "Education",
-    slides: [
-      {
-        img: "mooc.jpg",
-        title: "MOOCs",
-        desc: "Massive Open Online Courses democratize access to world-class educators.",
-        href: "https://www.coursera.org/"
-      },
-      {
-        img: "online+teaching.jpg",
-        title: "Virtual Classrooms",
-        desc: "Interactive platforms like Zoom and Teams replicate classroom dynamics online.",
-        href: "https://www.learncube.com/what-is-a-virtual-classroom.html"
-      },
-      {
-        img: "ai tutors.png",
-        title: "AI Tutors",
-        desc: "Adaptive systems personalize learning paths based on each student’s performance.",
-        href: "https://elearningindustry.com/ai-tutors-how-artificial-intelligence-is-shaping-educational-support"
-      },
-      {
-        img: "gamified learning.jpg",
-        title: "Gamified Learning",
-        desc: "Badges, points, and leaderboards make education engaging and reward mastery.",
-        href: "https://en.wikipedia.org/wiki/Gamification_of_learning#:~:text=The%20gamification%20of%20learning%20is,inspiring%20them%20to%20continue%20learning."
-      }
-    ]
-  },
-  {
-    id: "finance",
-    title: "Finance",
-    slides: [
-      {
-        img: "fintech apps.webp",
-        title: "FinTech Apps",
-        desc: "Mobile wallets and UPI process billions of transactions seamlessly every day.",
-        href: "https://www.paytm.com/"
-      },
-      {
-        img: "blockchain images.webp",
-        title: "Blockchain",
-        desc: "Decentralized ledgers reduce fraud and speed up cross-border settlements.",
-        href: "https://en.wikipedia.org/wiki/Blockchain"
-      },
-      {
-        img: "robo advisors.jpg",
-        title: "Robo-Advisors",
-        desc: "Algorithmic investing platforms offer low-fee, automated portfolio management.",
-        href: "https://en.wikipedia.org/wiki/Robo-advisor"
-      },
-      {
-        img: "open banking.png",
-        title: "Open Banking",
-        desc: "APIs let third-party developers build innovative services around bank data.",
-        href: "https://www.investopedia.com/terms/o/open-banking.asp"
-      }
-    ]
-  },
-  {
-    id: "business",
-    title: "Business",
-    slides: [
-      {
-        img: "remote collaboration.png",
-        title: "Remote Collaboration",
-        desc: "Tools like Slack and Notion keep distributed teams aligned and productive.",
-        href: "https://www.cognizant.com/us/en/glossary/remote-collaboration"
-      },
-      {
-        img: "cloud migration.webp",
-        title: "Cloud Migration",
-        desc: "Enterprises shift to AWS, Azure, and GCP for scalability and resilience.",
-        href: "https://www.accenture.com/in-en/insights/cloud-migration-index"
-      },
-      {
-        img: "process automation.jpg",
-        title: "Process Automation",
-        desc: "RPA bots handle repetitive tasks—freeing human talent for higher-value work.",
-        href: "https://www.sap.com/india/products/technology-platform/process-automation/what-is-process-automation.html#:~:text=Process%20automation%20definition-,Process%20automation%20is%20defined%20as%20the%20use%20of%20software%20and,employee%2C%20or%20providing%20customer%20service."
-      },
-      {
-        img: "data driven culture.jpg",
-        title: "Data-Driven Culture",
-        desc: "Real-time dashboards enable evidence-based decisions at every level.",
-        href: "https://www.datacamp.com/blog/how-to-create-data-driven-organization"
-      }
-    ]
-  }
-];
-
+    ];
     document.addEventListener('DOMContentLoaded', () => {
       const main = document.querySelector('main');
-      
-      // Create carousels
       sectors.forEach(sector => {
         const carouselHTML = `
           <section class="sector">
@@ -656,8 +563,6 @@
         `;
         main.insertAdjacentHTML('beforeend', carouselHTML);
       });
-
-      // Carousel controls
       document.querySelectorAll('.btn-prev, .btn-next').forEach(btn => {
         btn.addEventListener('click', (e) => {
           const container = e.target.closest('.carousel-container');
@@ -667,8 +572,6 @@
           track.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
         });
       });
-
-      // Auto-advance carousels
       sectors.forEach(sector => {
         const container = document.getElementById(`${sector.id}-carousel`);
         const track = container.querySelector('.carousel-track');
@@ -676,7 +579,6 @@
           const slideWidth = track.querySelector('.slide').offsetWidth + 24;
           track.scrollBy({ left: slideWidth, behavior: 'smooth' });
         }, 5000);
-
         container.addEventListener('mouseenter', () => clearInterval(autoScroll));
         container.addEventListener('mouseleave', () => {
           autoScroll = setInterval(() => {
@@ -685,18 +587,16 @@
           }, 5000);
         });
       });
-      //href functionality
-sectors.forEach(sector => {
-  const track = document.getElementById(`${sector.id}-track`);
-  sector.slides.forEach((slideData, idx) => {
-    const slideElem = track.children[idx];
-    slideElem.style.cursor = 'pointer';
-    slideElem.addEventListener('click', () => {
-      window.open(slideData.href, '_blank');
-    });
-  });
-});
-      // Stats animation
+      sectors.forEach(sector => {
+        const track = document.getElementById(`${sector.id}-track`);
+        sector.slides.forEach((slideData, idx) => {
+          const slideElem = track.children[idx];
+          slideElem.style.cursor = 'pointer';
+          slideElem.addEventListener('click', () => {
+            window.open(slideData.href, '_blank');
+          });
+        });
+      });
       const animateStat = (id, end, suffix='') => {
         const el = document.getElementById(id);
         let cur = 0;
@@ -714,6 +614,7 @@ sectors.forEach(sector => {
       animateStat('stat1', 80, '%');
       animateStat('stat2', 4, 'T');
       animateStat('stat3', 65, '%');
+      $('.modal').modal({ show: false });
     });
   </script>
 </body>
