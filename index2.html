@@ -3,40 +3,326 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles2.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
     <title>The Digital Readiness Quiz</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1a1a2e 0%, #27293d 100%);
+        color: #333;
+        line-height: 1.5;
+      }
+      :root {
+        --primary-color: #6c63ff;
+        --secondary-color: #2f2e41;
+        --accent-color: #ff6584;
+      }
+      .navbar {
+        background: linear-gradient(135deg, var(--secondary-color) 0%, #1a1a2e 100%);
+        box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+        padding: 1rem 2rem;
+      }
+      #adi {
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 700;
+        background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease;
+      }
+      .navbar-brand:hover {
+        transform: scale(1.05);
+      }
+      .nav-link {
+        color: #fff !important;
+        font-weight: 500;
+        margin: 0 1rem;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent-color);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .nav-link.active {
+        color: var(--accent-color) !important;
+      }
+      .quiz1,
+      .quiz2 {
+        background-color: #1f222e;
+        max-width: 700px;
+        margin: 40px auto;
+        border-radius: 10px;
+        padding: 30px 40px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+      }
+      .quiz1 {
+        margin-top: 50px;
+      }
+      .quiz1 h2,
+      .quiz2 h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 24px;
+        color: #00e5ff;
+        padding-bottom: 8px;
+        border-bottom: 3px solid #ff0054;
+      }
+      .question {
+        margin-bottom: 20px;
+      }
+      .question h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: #a3a8c6;
+      }
+      .question label {
+        display: block;
+        cursor: pointer;
+        margin: 8px 0;
+        color: #fff;
+        transition: color 0.2s ease;
+      }
+      .question label:hover {
+        color: #ff0054;
+      }
+      .question input[type="radio"] {
+        margin-right: 8px;
+        accent-color: #fff;
+      }
+      .submitBtn1,
+      .submitBtn2 {
+        display: block;
+        width: 100%;
+        padding: 14px 0;
+        margin-top: 20px;
+        background-color: #ff0054;
+        color: #ffffff;
+        font-size: 1.05rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+      }
+      .submitBtn1:hover,
+      .submitBtn2:hover {
+        background-color: #00e5ff;
+      }
+      .submitBtn1:active,
+      .submitBtn2:active {
+        transform: translateY(2px);
+      }
+      .result1,
+      .result2 {
+        margin-top: 24px;
+        text-align: center;
+        font-size: 1.1rem;
+        min-height: 1.4em;
+        color: #00e5ff;
+        opacity: 0;
+        animation: fadeIn 0.4s forwards;
+      }
+      @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+      @media (max-width: 768px) {
+        body {
+          padding: 30px 16px;
+        }
+        .quiz1, .quiz2 {
+          padding: 24px 28px;
+          margin: 30px auto;
+        }
+        .quiz1 h2, .quiz2 h2 {
+          font-sizeкипно: 1.8rem;
+        }
+        .submitBtn1, .submitBtn2 {
+          font-size: 1rem;
+          padding: 12px 0;
+        }
+      }
+      @media (max-width: 480px) {
+        .quiz1, .quiz2 {
+          padding: 20px;
+          margin: 20px auto;
+        }
+        .quiz1 h2, .quiz2 h2 {
+          font-size: 1.6rem;
+        }
+        .question h3 {
+          font-size: 1rem;
+        }
+        .submitBtn1, .submitBtn2 {
+          font-size: 0.95rem;
+          padding: 10px 0;
+        }
+      }
+      .motivation-container {
+        background: linear-gradient(135deg, #6c63ff, #ff6584);
+        color: white;
+        padding: 2rem;
+        margin: 150px auto 40px auto;
+        border-radius: 15px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        max-width: 800px;
+        text-align: center;
+        animation: fadeInUp 1s ease;
+      }
+      .motivation-container h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+      }
+      .motivation-container p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 0;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .footer {
+        background: linear-gradient(135deg, #1a1a2e 0%, #2f2e41 100%);
+        color: #a3a8c6;
+        border-top: 3px solid var(--primary-color);
+        padding-top: 40px;
+        padding-bottom: 10px;
+      }
+      .gradient-text {
+        background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+      }
+      .footer h5 {
+        color: #00e5ff;
+        margin-bottom: 1.2rem;
+      }
+      .footer-link {
+        color: #a3a8c6;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: block;
+        margin: 0.5rem 0;
+      }
+      .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      .footer-link:hover {
+        color: var(--accent-color);
+        transform: translateX(5px);
+      }
+      .social-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+      .social-icon {
+        color: #a3a8c6;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+      .social-icon:hover {
+        color: var(--accent-color);
+        transform: translateY(-3px);
+      }
+      .made-in-india {
+        display: block;
+        margin-top: 0.5rem;
+      }
+      .heart {
+        color: var(--accent-color);
+        animation: heartbeat 1.5s infinite;
+      }
+      @keyframes heartbeat {
+        0% { transform: scale(1); }
+        15% { transform: scale(1.3); }
+        30% { transform: scale(1); }
+        45% { transform: scale(1.15); }
+        60% { transform: scale(1); }
+      }
+      .modal-content {
+        border: 2px solid var(--primary-color);
+        border-radius: 10px;
+      }
+      .modal-header {
+        background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        color: white;
+        border-bottom: none;
+      }
+      .modal-title {
+        font-weight: 700;
+      }
+      .modal-body {
+        background: #fff;
+        color: var(--secondary-color);
+      }
+      .modal-footer {
+        border-top: none;
+      }
+      .btn-visit {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        transition: all 0.3s ease;
+      }
+      .btn-visit:hover {
+        background: var(--accent-color);
+        transform: scale(1.05);
+      }
+    </style>
   </head>
   <body>
-     <nav class="navbar navbar-expand-lg fixed-top">
-        <a class="navbar-brand" href="#">Technological Advancements</a><li class="nav-item"><a class="nav-link active"id="adi" href="#home">By Aditya and Ashvik</a></li>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="index3.html">About This Project</a></li>
-                <li class="nav-item"><a class="nav-link" href="index1.html">Industries Transformed</a></li>
-                <li class="nav-item"><a class="nav-link" href="index2.html">Quiz</a></li>
-            </ul>
-        </div>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <a class="navbar-brand" href="#">Technological Advancements</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link active" id="adi" href="#home">By Aditya and Ashvik</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index3.html">About This Project</a></li>
+          <li class="nav-item"><a class="nav-link" href="index1.html">Industries Transformed</a></li>
+          <li class="nav-item"><a class="nav-link" href="index2.html">Quiz</a></li>
+        </ul>
+      </div>
     </nav>
-        <!-- Motivation Container -->
     <div class="motivation-container animate__animated animate__fadeInUp">
       <h1>🚀 Test Your Digital IQ! 🧠</h1>
       <p>Discover how well you're adapting to the digital revolution! This quick quiz will help you understand your tech-savviness level and give insights into areas where you can grow. Whether you're a digital native or just starting your journey, let's see how you stack up in today's tech-driven world!</p>
@@ -65,9 +351,7 @@
           <label><input type="radio" name="q4" value="0" /> No</label>
         </div>
         <div class="question">
-          <h3>
-            5. Do you prefer E-Com & Quick-Com over shopping in a retail store?
-          </h3>
+          <h3>5. Do you prefer E-Com & Quick-Com over shopping in a retail store?</h3>
           <label><input type="radio" name="q5" value="1" /> Yes</label>
           <label><input type="radio" name="q5" value="0" /> No</label>
         </div>
@@ -75,19 +359,16 @@
         <div class="result1" id="result1"></div>
       </form>
     </section>
-
-    <!-- quiz2 -->
-
     <section class="quiz2">
       <h2>How Tech Savvy are you?</h2>
       <form id="quiz2">
         <div class="question">
-          <h3>1. When faced with a new technology, you usually: </h3>
+          <h3>1. When faced with a new technology, you usually:</h3>
           <label><input type="radio" name="q6" value="1" /> Explore and learn it independently</label>
           <label><input type="radio" name="q6" value="0" /> Wait for someone to explain it to you</label>
         </div>
         <div class="question">
-          <h3>2.How often do you update your digital skills (new apps, AI tools, etc)?</h3>
+          <h3>2. How often do you update your digital skills (new apps, AI tools, etc)?</h3>
           <label><input type="radio" name="q7" value="1" /> Regularly, it's part of my routine</label>
           <label><input type="radio" name="q7" value="0" /> Only when absolutely necessary</label>
         </div>
@@ -97,13 +378,12 @@
           <label><input type="radio" name="q8" value="0" /> Ignore it</label>
         </div>
         <div class="question">
-          <h3>4. How comfortable are you working or studying remotely using technology(AI & EdTech, etc.)?</h3>
+          <h3>4. How comfortable are you working or studying remotely using technology (AI & EdTech, etc.)?</h3>
           <label><input type="radio" name="q9" value="1" /> Very comfortable — it's efficient</label>
           <label><input type="radio" name="q9" value="0" /> I prefer traditional methods</label>
         </div>
         <div class="question">
-          <h3>
-            5. In a world increasingly run by AI, you see yourself as: </h3>
+          <h3>5. In a world increasingly run by AI, you see yourself as:</h3>
           <label><input type="radio" name="q10" value="1" /> A creator and innovator of solutions</label>
           <label><input type="radio" name="q10" value="0" /> A follower adapting slowly</label>
         </div>
@@ -114,13 +394,10 @@
     <footer class="footer mt-5">
       <div class="footer-container py-5">
         <div class="row">
-          <!-- Brand Column -->
           <div class="col-md-4 mb-4">
             <h3 class="gradient-text">Technological Advancements</h3>
             <p class="text-muted mt-3">Exploring the digital frontier and its impact on modern society.</p>
           </div>
-  
-          <!-- Quick Links -->
           <div class="col-md-3 mb-4">
             <h5>Quick Links</h5>
             <ul class="list-unstyled">
@@ -130,19 +407,15 @@
               <li><a href="index3.html" class="footer-link">About</a></li>
             </ul>
           </div>
-  
-          <!-- Learn More -->
           <div class="col-md-3 mb-4">
             <h5>Learn More</h5>
             <ul class="list-unstyled">
-              <li><a href="https://www.pendo.io/glossary/digital-adoption/" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionModal">What is Digital Adoption?</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Digital_adoption_platform" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionPlatformModal">What is Digital Adoption Platform?</a></li>
-              <li><a href="https://en.wikipedia.org/wiki/Virtual_workplace" class="footer-link learn-more-link" data-toggle="modal" data-target="#virtualWorkplaceModal">Virtual Workplace</a></li>
-              <li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/case-studies" class="footer-link learn-more-link" data-toggle="modal" data-target="#caseStudiesModal">Case Studies</a></li>
+              <li><a href="#" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionModal">What is Digital Adoption?</a></li>
+              <li><a href="#" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionPlatformModal">What is Digital Adoption Platform?</a></li>
+              <li><a href="#" class="footer-link learn-more-link" data-toggle="modal" data-target="#virtualWorkplaceModal">Virtual Workplace</a></li>
+              <li><a href="#" class="footer-link learn-more-link" data-toggle="modal" data-target="#caseStudiesModal">Case Studies</a></li>
             </ul>
           </div>
-  
-          <!-- Social Media -->
           <div class="col-md-2 mb-4">
             <h5>Connect With Us</h5>
             <div class="social-links mt-3">
@@ -152,8 +425,6 @@
             </div>
           </div>
         </div>
-  
-        <!-- Copyright + Made in India -->
         <div class="row mt-4">
           <div class="col-12 text-center">
             <p class="mb-0 text-muted">
@@ -164,6 +435,85 @@
         </div>
       </div>
     </footer>
+    <div class="modal fade" id="digitalAdoptionModal" tabindex="-1" role="dialog" aria-labelledby="digitalAdoptionModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="digitalAdoptionModalLabel">What is Digital Adoption?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Digital adoption refers to the process by which users fully embrace and effectively utilize digital technologies to achieve their goals. It goes beyond merely implementing new tools, focusing on ensuring that individuals and organizations maximize the value of these technologies through proper training, engagement, and integration into daily workflows.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="https://www.pendo.io/glossary/digital-adoption/" class="btn btn-visit">Visit Resource</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="digitalAdoptionPlatformModal" tabindex="-1" role="dialog" aria-labelledby="digitalAdoptionPlatformModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="digitalAdoptionPlatformModalLabel">What is Digital Adoption Platform?</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            A Digital Adoption Platform (DAP) is a software solution designed to guide users through digital tools and applications, enhancing their ability to adopt and use technology effectively. DAPs provide in-app guidance, tutorials, and analytics to help organizations streamline onboarding, improve user experience, and drive engagement with digital products.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="https://en.wikipedia.org/wiki/Digital_adoption_platform" class="btn btn-visit">Visit Resource</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="virtualWorkplaceModal" tabindex="-1" role="dialog" aria-labelledby="virtualWorkplaceModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="virtualWorkplaceModalLabel">Virtual Workplace</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            A virtual workplace is a digital environment where employees can collaborate, communicate, and perform their job functions remotely using digital tools. Enabled by technologies like cloud computing, video conferencing, and collaboration platforms, virtual workplaces support flexible work arrangements and global connectivity.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="https://en.wikipedia.org/wiki/Virtual_workplace" class="btn btn-visit">Visit Resource</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="caseStudiesModal" tabindex="-1" role="dialog" aria-labelledby="caseStudiesModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="caseStudiesModalLabel">Case Studies</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Case studies on digital transformation showcase real-world examples of how organizations leverage technology to innovate, improve efficiency, and enhance customer experiences. These studies provide insights into successful strategies, challenges faced, and the impact of digital initiatives across various industries.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/case-studies" class="btn btn-visit">Visit Resource</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
