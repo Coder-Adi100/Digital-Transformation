@@ -264,7 +264,11 @@ body {
   display: block;
   margin: 0.5rem 0;
 }
-
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  
 .footer-link:hover {
   color: var(--accent-color);
   transform: translateX(5px);
