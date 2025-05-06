@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About This Project</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles3.css">
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="#">Technological Advancements</a><li class="nav-item"><a class="nav-link active"id="adi" href="#home">By Aditya and Ashvik</a></li>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="index3.html">About This Project</a></li>
+                <li class="nav-item"><a class="nav-link" href="index1.html">Industries Transformed</a></li>
+                <li class="nav-item"><a class="nav-link" href="index2.html">Quiz</a></li>
+            </ul>
+        </div>
+    </nav>
+  <main class="container">
+    <header>
+      <h1>About This Project</h1>
+      <p class="intro">
+        Exploring the milestones and impact of <strong>Digital Transformation</strong>,
+        this student-led project traces how technology has reshaped industries,
+        workflows, and daily life.
+      </p>
+    </header>
+
+    <section>
+      <h2>What You'll Find Here</h2>
+      <dl>
+        <dt>Page 1 - The Digital Shift</dt>
+        <dd>
+          A concise introduction to the concept, key statistics, and real-world analogies.
+        </dd>
+
+        <dt>Page 2 - Industries Transformed</dt>
+        <dd>
+          Engaging Carousels showcasing how sectors like Healthcare,
+          Education, Finance, and Business have evolved.
+        </dd>
+
+        <dt>Page 3 - Your Digital Readiness</dt>
+        <dd>
+          Two dynamic quizzes to assess your familiarity
+          with emerging tools and trends.
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>How We Built It</h2>
+      <ul class="build-list">
+        <li>
+          <strong>Pure HTML, CSS &amp; Vanilla JS</strong><br>
+          Every animation, quiz, and style rule was handcrafted—no external libraries.
+        </li>
+        <li>
+          <strong>Responsive Design</strong><br>
+          Media queries ensure a seamless experience from desktops to smartphones.
+        </li>
+        <li>
+          <strong>Interactive Elements</strong><br>
+          CSS keyframes power the aesthetics; JS handles quizzes and other interactive elements.
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="footer mt-5">
+    <div class="container py-5">
+        <div class="row">
+            <!-- Brand Column -->
+            <div class="col-md-4 mb-4">
+                <h3 class="gradient-text">Technological Advancements</h3>
+                <p class="text-muted mt-3">Exploring the digital frontier and its impact on modern society.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-4 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="index1.html" class="footer-link">Industries</a></li>
+                    <li><a href="index2.html" class="footer-link">Quiz</a></li>
+                    <li><a href="index3.html" class="footer-link">About</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h5>Learn More</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.pendo.io/glossary/digital-adoption/" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionModal">What is Digital Adoption?</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Digital_adoption_platform" class="footer-link learn-more-link" data-toggle="modal" data-target="#digitalAdoptionPlatformModal">What is Digital Adoption Platform?</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Virtual_workplace" class="footer-link learn-more-link" data-toggle="modal" data-target="#virtualWorkplaceModal">Virtual Workplace</a></li>
+                    <li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/case-studies" class="footer-link learn-more-link" data-toggle="modal" data-target="#caseStudiesModal">Case Studies</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="col-md-4 mb-4">
+                <h5>Connect With Us</h5>
+                <div class="social-links mt-3">
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright + Made in India -->
+        <div class="row mt-4">
+            <div class="col-12 text-center">
+                <p class="mb-0 text-muted">
+                    © 2025 Aditya Sharma & Ashvik. All rights reserved. 
+                    <span class="made-in-india">Made with <span class="heart">❤️</span> in India</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Modals -->
+<!-- Digital Adoption Modal -->
+<div class="modal fade" id="digitalAdoptionModal" tabindex="-1" aria-labelledby="digitalAdoptionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="digitalAdoptionModalLabel">What is Digital Adoption?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Digital adoption refers to the process by which users fully embrace and effectively utilize digital technologies to achieve their goals. It goes beyond merely implementing new tools, focusing on ensuring that individuals and organizations maximize the value of these technologies through proper training, engagement, and integration into daily workflows.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://www.pendo.io/glossary/digital-adoption/" class="btn btn-visit">Visit Resource</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Digital Adoption Platform Modal -->
+<div class="modal fade" id="digitalAdoptionPlatformModal" tabindex="-1" aria-labelledby="digitalAdoptionPlatformModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="digitalAdoptionPlatformModalLabel">What is Digital Adoption Platform?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                A Digital Adoption Platform (DAP) is a software solution designed to guide users through digital tools and applications, enhancing their ability to adopt and use technology effectively. DAPs provide in-app guidance, tutorials, and analytics to help organizations streamline onboarding, improve user experience, and drive engagement with digital products.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://en.wikipedia.org/wiki/Digital_adoption_platform" class="btn btn-visit">Visit Resource</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Virtual Workplace Modal -->
+<div class="modal fade" id="virtualWorkplaceModal" tabindex="-1" aria-labelledby="virtualWorkplaceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="virtualWorkplaceModalLabel">Virtual Workplace</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                A virtual workplace is a digital environment where employees can collaborate, communicate, and perform their job functions remotely using digital tools. Enabled by technologies like cloud computing, video conferencing, and collaboration platforms, virtual workplaces support flexible work arrangements and global connectivity.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://en.wikipedia.org/wiki/Virtual_workplace" class="btn btn-visit">Visit Resource</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Case Studies Modal -->
+<div class="modal fade" id="caseStudiesModal" tabindex="-1" aria-labelledby="caseStudiesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="caseStudiesModalLabel">Case Studies</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Case studies on digital transformation showcase real-world examples of how organizations leverage technology to innovate, improve efficiency, and enhance customer experiences. These studies provide insights into successful strategies, challenges faced, and the impact of digital initiatives across various industries.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/case-studies" class="btn btn-visit">Visit Resource</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
