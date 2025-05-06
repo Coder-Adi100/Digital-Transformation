@@ -237,4 +237,70 @@ body {
           transform: translateY(0);
         }
       }
+ /* Footer */
+ .footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #2f2e41 100%);
+  color: #a3a8c6;
+  border-top: 3px solid var(--primary-color);
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
 
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.footer h5 {
+  color: #00e5ff;
+  margin-bottom: 1.2rem;
+}
+
+.footer-link {
+  color: #a3a8c6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-icon {
+  color: #a3a8c6;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.made-in-india {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.heart {
+  color: var(--accent-color);
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  15% { transform: scale(1.3); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.15); }
+  60% { transform: scale(1); }
+}
